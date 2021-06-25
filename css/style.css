@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    outline: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Raleway, Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+:root{
+    --mainColor: #6FDA44;
+    --regularWhite: #ffffff;
+}
+body{
+    scroll-behavior: smooth;
+}
+/*header part start*/
+#header{
+    width: 1366px;
+    height: 73px;
+    background-color: #222222;
+    border-bottom: 1px solid var(--mainColor);
+    box-shadow: 1px 3px 15px #757272;
+}
+#navbar{
+    margin: 0 90px;
+}
+#header #navlogo{
+    width: 300px;
+    height: 73px;
+}
+#header #navlogo img{
+    margin-top: 11px;
+}
+#header #navmenu{
+    width: 840px;
+    height: 73px;
+    margin-left: 46px;
+}
+#header #navmenu li{
+    display: inline-block;
+    height: auto;
+    width: auto;
+    margin-left: 20px;
+    font-size: 17px;
+    text-transform: capitalize;
+    color: var(--regularWhite);
+    padding-top: 25px;
+    padding-bottom: 27px;
+    transition: .7s;
+    position: relative;
+    z-index: 1;
+}
+#header #navmenu li:hover{
+    color: var(--mainColor);
+    transition: .7s;
+}
+#header #navmenu li::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: var(--mainColor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: .7s;
+}
+#header #navmenu li:hover::after{
+    width: 100%;
+    transition: .7s;
+    left: 0;
+}
+/*header part end*/
+
+/*banner part start*/
+#banner {
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+}
+
+#banner .banner_content {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+#banner .banner_content .banner_img{
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#banner .banner_text{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.60);
+    text-align: center;
+    align-self: center;
+    height: 767px;
+}
+
+#banner .banner_text h3{
+    font-size: 36px;
+    color: var(--regularWhite);
+    font-weight: 400;
+}
+
+#banner .banner_text h2{
+    font-size: 55px;
+    color: var(--mainColor);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#banner .banner_text p{
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--regularWhite);
+    font-weight: 400;
+}
+
+#banner .banner_text a{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--regularWhite);
+    border: 1px solid var(--mainColor);
+    height: 50px;
+    width: 130px;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 35px 4px 0 10px;
+    transition: all linear .5s;
+}
+
+#banner .banner_text a:hover{
+    background: var(--mainColor);
+    border: 1px solid var(--regularWhite);
+    color: #111111;
+    font-weight: 600;
+}
+
+#banner .banner_text .text{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#banner .slick-arrow{
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    background-color: var(--regularWhite);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: .5s;
+}
+#banner .slick-arrow:hover{
+    background-color: var(--mainColor);
+    transition: .5s;
+    color: var(--regularWhite);
+}
+#banner .slick-arrow.slider_arrowLeft{
+    left: 15px;
+}
+#banner .slick-arrow.slider_arrowRight{
+    right: 15px;
+}
+/* Banner Part End */
+
+/*about us part*/
+#about_us{
+    height: 175px;
+    width: 1366px;
+}
+#about_us #about_us_content{
+    height: 175px;
+    width: 585px;
+    margin: 0 auto;
+}
+#about_us #about_us_content h2{
+    font-size: 35px;
+    font-weight: 400;
+    color: #111111;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 215px;
+    padding-top: 50px;
+}
+#about_us #about_us_content p{
+    font-size: 14px;
+    color: #444444;
+    text-align: center;
+    padding-top: 20px;
+}
+/*about us end*/
